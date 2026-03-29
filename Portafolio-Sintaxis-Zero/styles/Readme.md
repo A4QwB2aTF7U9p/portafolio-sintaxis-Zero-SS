@@ -11,6 +11,7 @@ El objetivo es presentar nuestro blog y nuestras competencias en el desarrollo d
 
 - Angel Eriberto Gabriel Senyam (24-misn-2-022)
 - Hector Alexander Martin (24-misn-2-037)
+- Maria Luisa Garcia (24-mist-2-006)
 
 ---
 
@@ -61,7 +62,7 @@ https://sites.google.com/view/sintaxiszero/inicio
 
 ### Vercel
 
-(https://portafolio-sintaxis-zero-3-git-main-am4563603-7905s-projects.vercel.app)
+()
 
 ### Blog
 
