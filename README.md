@@ -62,7 +62,7 @@ Nuestro blog trata sobre el algoritmo de comportamiento en los ingenieros y desa
 
 ### Vercel
 
-(https://portafolio-sintaxis-zero-3-git-main-am4563603-7905s-projects.vercel.app)
+()
 
 ### Blog
 
