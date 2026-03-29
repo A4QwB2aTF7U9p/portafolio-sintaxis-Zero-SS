@@ -58,7 +58,7 @@ Nuestro blog trata sobre el algoritmo de comportamiento en los ingenieros y desa
 
 ### GitHub
 
-(https://github.com/A4QwB2aTF7U9p/portafolio-sintaxis-Zero-1)
+(https://github.com/A4QwB2aTF7U9p/portafolio-sintaxis-Zero-SS/tree/main/Portafolio-Sintaxis-Zero)
 
 ### Vercel
 
