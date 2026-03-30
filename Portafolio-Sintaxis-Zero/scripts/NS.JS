@@ -2,13 +2,13 @@
 let numeroSecreto = Math.floor(Math.random() * 10) + 1;
 let intentos = 0;
 
-// Botón intentar
+
 function verificarNumero() {
 
     let campo = document.getElementById("numeroUsuario");
     let numero = campo.value;
 
-    // 3 Campo vacío
+    
     if (numero === "") {
         alert("Debe ingresar un número");
         return;
@@ -17,13 +17,13 @@ function verificarNumero() {
     numero = Number(numero);
     intentos++;
 
-    // 6 Felicitación
+    
     if (numero === numeroSecreto) {
 
         document.getElementById("mensaje").innerHTML =
         "Felicitaciones, acertaste el número secreto";
 
-        // 7 Intentos
+        
         if (intentos === 1) {
             document.getElementById("intentos").innerHTML =
             "Adivinaste el número en 1 intento";
@@ -34,7 +34,7 @@ function verificarNumero() {
 
     }
 
-    // 4 Número secreto mayor
+    
     else if (numero < numeroSecreto) {
 
         document.getElementById("mensaje").innerHTML =
@@ -42,7 +42,7 @@ function verificarNumero() {
 
     }
 
-    // 5 Número secreto menor
+    
     else {
 
         document.getElementById("mensaje").innerHTML =
@@ -50,12 +50,12 @@ function verificarNumero() {
 
     }
 
-    // 8 Limpiar campo automáticamente
+    
     campo.value = "";
     campo.focus();
 }
 
-// 9 Nuevo juego
+
 function nuevoJuego() {
 
     numeroSecreto = Math.floor(Math.random() * 10) + 1;
