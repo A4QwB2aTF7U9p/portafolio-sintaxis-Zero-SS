@@ -1,67 +1,76 @@
-// Número secreto del 1 al 10
 let numeroSecreto = Math.floor(Math.random() * 10) + 1;
 let intentos = 0;
+let maxIntentos = 3;
 
-// Botón intentar
 function verificarNumero() {
 
     let campo = document.getElementById("numeroUsuario");
     let numero = campo.value;
 
-    // 3 Campo vacío
+    
     if (numero === "") {
         alert("Debe ingresar un número");
         return;
     }
 
+    
     numero = Number(numero);
+
+    
+    if (numero < 1 || numero > 10) {
+        document.getElementById("mensaje").innerHTML =
+        "⚠️ Solo puedes usar números del 1 al 10";
+        return;
+    }
+
     intentos++;
 
-    // 6 Felicitación
     if (numero === numeroSecreto) {
-
         document.getElementById("mensaje").innerHTML =
-        "Felicitaciones, acertaste el número secreto";
+        "🎉 ¡Ganaste!";
 
-        // 7 Intentos
-        if (intentos === 1) {
-            document.getElementById("intentos").innerHTML =
-            "Adivinaste el número en 1 intento";
+        document.getElementById("intentos").innerHTML =
+        "Lo lograste en " + intentos + " intento(s)";
+        return;
+    }
+
+    if (intentos < maxIntentos) {
+
+        if (numero < numeroSecreto) {
+            document.getElementById("mensaje").innerHTML =
+            "El número es mayor";
         } else {
-            document.getElementById("intentos").innerHTML =
-            "Adivinaste el número en " + intentos + " intentos";
+            document.getElementById("mensaje").innerHTML =
+            "El número es menor";
         }
 
-    }
+        document.getElementById("intentos").innerHTML =
+        " Intento " + intentos + " / " + maxIntentos;
 
-    // 4 Número secreto mayor
-    else if (numero < numeroSecreto) {
-
-        document.getElementById("mensaje").innerHTML =
-        "El número secreto es mayor";
-
-    }
-
-    // 5 Número secreto menor
-    else {
+    } else {
 
         document.getElementById("mensaje").innerHTML =
-        "El número secreto es menor";
+        " Perdiste. El número era " + numeroSecreto;
 
+        document.getElementById("intentos").innerHTML =
+        "Se acabaron los intentos";
+
+        document.getElementById("modo").innerHTML =
+        " Modo desafío terminado";
     }
 
-    // 8 Limpiar campo automáticamente
     campo.value = "";
     campo.focus();
 }
 
-// 9 Nuevo juego
 function nuevoJuego() {
-
     numeroSecreto = Math.floor(Math.random() * 10) + 1;
     intentos = 0;
 
     document.getElementById("mensaje").innerHTML = "";
     document.getElementById("intentos").innerHTML = "";
     document.getElementById("numeroUsuario").value = "";
+
+    document.getElementById("modo").innerHTML =
+    "Modo desafío: 3 intentos";
 }
